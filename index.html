@@ -3,129 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENU Kitchen | Premium Ethiopian Cuisine</title>
+    <title>ENU KITCHEN | Premium Ethiopian Tradition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <a href="https://wa.me/251941147017" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <nav class="navbar">
-        <div class="logo">ENU KITCHEN</div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="logo.jpg" alt="ENU Kitchen Logo" style="height: 50px; width: 50px; border-radius: 50%; border: 2px solid #ff1a1a; box-shadow: 0 0 10px #ff1a1a;">
+            <div class="logo">ENU KITCHEN</div>
+        </div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#featured">As Seen On TV</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tv">As Seen On TV</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">Our Story</a></li>
+            <li><a href="#story">Our Story</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header id="hero" class="hero-section">
-        <div class="hero-overlay"></div>
+    <header id="home" class="hero-section">
         <div class="hero-content">
-            <span class="hero-subtitle">WELCOME TO ADDIS ABABA'S FINEST</span>
-            <h1>Authentic Ethiopian Tradition, Premium Presentation</h1>
-            <p>Experience cultural culinary mastery crafted with love by Mom.</p>
-            <div class="hero-ctas">
-                <a href="#menu" class="btn btn-primary">Browse Menu</a>
-                <a href="tel:+251941147017" class="btn btn-secondary"><i class="fas fa-phone"></i> Call to Order</a>
+            <span class="hero-subtitle">Welcome to Addis Ababa's Finest</span>
+            <h1>Authentic Ethiopian Tradition,<br><span style="color: #ff1a1a; text-shadow: 0 0 15px rgba(255, 26, 26, 0.6);">Premium Presentation</span></h1>
+            <p>Experience cultural culinary mastery crafted with love by Mom. A futuristic taste of traditional heritage.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Browse Menu</a>
+                <a href="https://wa.me/251911223344" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call to Order</a>
             </div>
         </div>
     </header>
 
-    <section id="featured" class="featured-section">
+    <section id="tv" class="featured-section">
         <div class="section-header">
-            <h2>As Seen On TV</h2>
+            <h2>AS SEEN ON NATIONAL TV</h2>
             <div class="red-line"></div>
-            <p>Our kitchen is recognized nationally for authenticity and pristine quality.</p>
         </div>
         <div class="video-container">
             <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <h3>National TV Interview</h3>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ENU Kitchen Featured Interview" allowfullscreen></iframe>
+                <h3><i class="fa-solid fa-tv" style="color: #ff1a1a; margin-right: 10px;"></i> Exclusive Culinary Profile Interview</h3>
             </div>
         </div>
     </section>
 
     <section id="menu" class="menu-section">
         <div class="section-header">
-            <h2>Our Signature Menu</h2>
+            <h2>EXPLORE THE KITCHEN</h2>
             <div class="red-line"></div>
         </div>
 
         <div class="menu-tabs">
-            <button class="tab-btn active" onclick="openMenu(event, 'traditional')">Traditional</button>
-            <button class="tab-btn" onclick="openMenu(event, 'non-fasting')">Non-Fasting</button>
-            <button class="tab-btn" onclick="openMenu(event, 'fasting')">Fasting</button>
+            <button class="tab-btn active" onclick="openTab('signature')">Signature Dishes</button>
+            <button class="tab-btn" onclick="openTab('traditional')">Traditional Classics</button>
         </div>
 
-        <div id="traditional" class="menu-content active">
+        <div id="signature" class="menu-content active">
             <div class="menu-grid">
                 <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Ayb Begomen</h3>
-                    <p>Rich traditional fresh cheese cooked beautifully with chopped collard greens and spiced butter.</p>
-                    <span class="price">400 Birr</span>
+                    <div class="food-img-placeholder">
+                        <i class="fa-solid fa-fire-flame-curry"></i>
+                        <span>[ Drop Special Tibs Photo Here ]</span>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Special Tibs</h3>
+                        <p>Sizzling cubed beef seared with rich seasoned butter, onions, peppers, and aromatic traditional spices.</p>
+                        <div class="price-container">
+                            <span class="price">450 Birr</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Ayb Besiga</h3>
-                    <p>Premium minced beef accompanied by seasoned traditional cheese and mitmita spices.</p>
-                    <span class="price">450 Birr</span>
+                    <div class="food-img-placeholder">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                        <span>[ Drop Kitfo Photo Here ]</span>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Premium Kitfo</h3>
+                        <p>Finely minced lean beef infused with spiced mitmita and herbal niter kibbeh. Served traditional style.</p>
+                        <div class="price-container">
+                            <span class="price">550 Birr</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="non-fasting" class="menu-content">
+        <div id="traditional" class="menu-content">
             <div class="menu-grid">
                 <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Dulet</h3>
-                    <p>Finely chopped tripe, liver, and lean beef fried gently with pure Ethiopian spiced butter.</p>
-                    <span class="price">450 Birr</span>
-                </div>
-                <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Special Kitfo</h3>
-                    <p>Finely minced raw or lightly warmed beef marinated in mitmita and niter kibbeh.</p>
-                    <span class="price">550 Birr</span>
-                </div>
-            </div>
-        </div>
-
-        <div id="fasting" class="menu-content">
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Special Shiro</h3>
-                    <p>Slow-simmered chickpea flour stew enriched with secret traditional herbs and spices.</p>
-                    <span class="price">300 Birr</span>
-                </div>
-                <div class="menu-card">
-                    <div class="food-img-placeholder"><i class="fas fa-utensils"></i></div>
-                    <h3>Fasting Beyaynetu</h3>
-                    <p>A colorful feast of various lentil stews, split peas, cabbage, and greens over fresh Injera.</p>
-                    <span class="price">380 Birr</span>
+                    <div class="food-img-placeholder">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <span>[ Drop Shiro Photo Here ]</span>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Special Shiro Beyaynetu</h3>
+                        <p>Slow-simmered organic chickpea powder stew cooked with garlic, ginger, and berbere. Smooth perfection.</p>
+                        <div class="price-container">
+                            <span class="price">320 Birr</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="story" class="about-section">
         <div class="about-container">
             <div class="about-text">
-                <h2>The Heart Behind the Kitchen</h2>
+                <h2>OUR STORY</h2>
                 <div class="red-line-left"></div>
-                <p>At ENU Kitchen, we believe cooking is an art form passed down through generations. Founded by Mom, every dish tells a story of authentic flavors, premium ingredients, and unconditional dedication to cultural preservation.</p>
-                <p>Whether you're visiting us in Addis Ababa or ordering directly to your home, we welcome you to the family table.</p>
+                <p>ENU Kitchen was founded on a simple principle: bringing the absolute highest-grade traditional Ethiopian cooking directly into the modern world with immaculate presentation.</p>
+                <p>Every single recipe, spice profile combination, and dynamic layout variant is engineered and monitored personally by Mom, combining family heritage with culinary excellence.</p>
             </div>
             <div class="about-img-placeholder">
-                <i class="fas fa-heart"></i>
-                <p>Mom's Kitchen Photo Here</p>
+                <i class="fa-solid fa-building-user" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <span>[ Drop Restaurant / Mom Photo Here ]</span>
             </div>
         </div>
     </section>
@@ -134,30 +128,45 @@
         <div class="footer-grid">
             <div class="footer-info">
                 <h3>ENU KITCHEN</h3>
-                <p>Premium Ethiopian Restaurant</p>
+                <p style="margin-bottom: 20px;">Redefining Ethiopian culinary heritage through modern design and unmatched flavor profile masteries.</p>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/enukitchen" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@enuskitchen" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:kitchenenus@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands var-icon fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands var-icon fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands var-icon fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-details">
-                <h4>Contact & Delivery</h4>
-                <p><i class="fas fa-phone"></i> +251 941147017</p>
-                <p><i class="fas fa-phone"></i> +251 941147018</p>
-                <p><i class="fas fa-phone"></i> +251 978533636</p>
+                <h4>CONTACT PORTAL</h4>
+                <p><i class="fa-solid fa-location-dot" style="color: #ff1a1a; margin-right: 10px;"></i> Bole, Addis Ababa, Ethiopia</p>
+                <p><i class="fa-solid fa-phone" style="color: #ff1a1a; margin-right: 10px;"></i> +251 911 22 33 44</p>
+                <p><i class="fa-solid fa-envelope" style="color: #ff1a1a; margin-right: 10px;"></i> orders@enukitchen.com</p>
             </div>
             <div class="footer-hours">
-                <h4>Hours & Location</h4>
-                <p><i class="fas fa-clock"></i> Mon - Sun: 7:00 AM - 10:00 PM</p>
-                <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                <h4>OPERATION HOURS</h4>
+                <p>Monday - Sunday</p>
+                <p style="color: #ffffff; font-weight: bold;"><i class="fa-regular fa-clock" style="color: #ff1a1a; margin-right: 8px;"></i> 08:00 AM - 10:00 PM</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ENU Kitchen. Handcrafted for Mom.</p>
+            <p>&copy; 2026 ENU Kitchen. Designed and Programmed securely by Nathanim.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <a href="https://wa.me/251911223344" target="_blank" class="whatsapp-float">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <script>
+        function openTab(tabId) {
+            let contents = document.querySelectorAll('.menu-content');
+            let tabs = document.querySelectorAll('.tab-btn');
+            
+            contents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
