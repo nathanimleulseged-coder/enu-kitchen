@@ -1,4 +1,4 @@
-/* GLOBAL RESETS */
+/* EXECUTIVE RESET SHEET */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,12 +9,12 @@
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #ffffff;
-    color: #1a1a1a;
+    color: #111111;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* PREMIUM RED OUTLINE NAVBAR */
+/* RED OUTLINE NAVIGATION BAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -23,11 +23,11 @@ body {
     background-color: rgba(255, 255, 255, 0.98);
     border: 2px solid #ff1a1a;
     border-radius: 0 0 16px 16px;
-    box-shadow: 0 4px 20px rgba(255, 26, 26, 0.15);
+    box-shadow: 0 4px 25px rgba(255, 26, 26, 0.12);
     position: sticky;
     top: 0;
-    z-index: 999;
-    margin: 0 10px;
+    z-index: 9999;
+    margin: 0 12px;
 }
 
 .logo {
@@ -44,10 +44,10 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #444444;
+    color: #333333;
     font-weight: 700;
     margin-left: 25px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
@@ -57,17 +57,17 @@ body {
     background: rgba(255, 26, 26, 0.05);
 }
 
-/* ROTATING LOGO PAGE TRANSITION SCREEN */
+/* ROTATING LOGO LOADING ENGINE */
 #loader-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background-color: #ffffff;
-    z-index: 10000;
+    z-index: 100000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
     visibility: hidden;
     opacity: 0;
 }
@@ -78,60 +78,62 @@ body {
 }
 
 .spinning-logo {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 4px solid #ff1a1a;
-    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
-    animation: masterSpin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    border: 3px solid #ff1a1a;
+    box-shadow: 0 0 25px rgba(255, 26, 26, 0.25);
+    animation: masterRotate 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
 .loader-text {
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: 800;
     color: #ff1a1a;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 /* HERO CANVAS */
 .hero-section {
-    padding: 100px 8%;
-    background: radial-gradient(circle at top right, rgba(255, 26, 26, 0.03) 0%, #ffffff 70%);
+    padding: 120px 8% 80px 8%;
+    background: radial-gradient(circle at top right, rgba(255, 26, 26, 0.02) 0%, #ffffff 80%);
     text-align: center;
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     font-weight: 900;
-    color: #111111;
+    color: #000000;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    color: #555555;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
+    font-size: 1.35rem;
+    color: #444444;
+    max-width: 750px;
+    margin: 0 auto 45px auto;
 }
 
-/* OUTLINE BUTTON SYSTEM */
+/* CUSTOM SOLID & OUTLINE BUTTON SYSTEM */
 .btn {
-    padding: 14px 30px;
+    padding: 15px 32px;
     text-decoration: none;
     font-weight: 700;
     border-radius: 8px;
     display: inline-block;
     margin: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1);
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
@@ -143,7 +145,8 @@ body {
 .btn-primary:hover {
     background-color: #ffffff;
     color: #ff1a1a;
-    box-shadow: 0 5px 15px rgba(255, 26, 26, 0.2);
+    box-shadow: 0 8px 20px rgba(255, 26, 26, 0.2);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -155,59 +158,62 @@ body {
 .btn-secondary:hover {
     border-color: #ff1a1a;
     color: #ff1a1a;
+    transform: translateY(-2px);
 }
 
-/* CONTAINER OUTLINES */
+/* CONTAINER MODULE OUTLINES */
 .section-container {
-    padding: 80px 8%;
-    margin: 40px 20px;
+    padding: 80px 6%;
+    margin: 45px 15px;
     background: #ffffff;
     border: 2px solid #ff1a1a;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 40px rgba(255, 26, 26, 0.03);
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    color: #111111;
+    font-size: 2.6rem;
+    color: #000000;
     font-weight: 900;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .red-bar {
-    width: 50px;
+    width: 60px;
     height: 4px;
     background-color: #ff1a1a;
-    margin: 12px auto 0 auto;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
 }
 
-/* VIDEO LAYER */
+/* VIDEO PORTAL FRAME */
 .video-frame {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     border: 2px solid #ff1a1a;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
 }
 
 .video-frame iframe {
     width: 100%;
-    height: 450px;
+    height: 480px;
     border: none;
     display: block;
 }
 
-/* EXTENDED MENU/DRINK GRIDS */
+/* CARD LAYOUT MATRIX */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 35px;
 }
 
 .menu-card {
@@ -215,72 +221,86 @@ body {
     border: 2px solid #ff1a1a;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(255, 26, 26, 0.12);
 }
 
 .img-box {
-    height: 200px;
-    background: #fff5f5;
+    height: 210px;
+    background: #fffafa;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #ff1a1a;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     border-bottom: 2px solid #ff1a1a;
 }
 
+.img-box i {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
 .card-details {
-    padding: 20px;
+    padding: 22px;
 }
 
 .card-details h3 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    color: #111111;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: 800;
 }
 
 .card-details p {
     font-size: 0.95rem;
-    color: #666666;
-    margin-bottom: 15px;
+    color: #555555;
+    margin-bottom: 20px;
+    height: 48px;
+    overflow: hidden;
 }
 
 .card-price {
     font-weight: 800;
     color: #ff1a1a;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    display: block;
 }
 
-/* GOOGLE MAP WRAPPER */
+/* MAP MODULE */
 .map-box {
     border: 2px solid #ff1a1a;
     border-radius: 12px;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
 }
 
 .map-box iframe {
     width: 100%;
-    height: 350px;
+    height: 400px;
     border: none;
     display: block;
 }
 
-/* FOOTER CANVAS */
+/* PREMIUM FOOTER BRACKET */
 footer {
     background: #ffffff;
     border-top: 2px solid #ff1a1a;
-    padding: 40px 20px;
+    padding: 45px 20px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
-/* WHATSAPP FLOAT */
+/* FLOATING COMMUNICATION ACTION */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -294,18 +314,19 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    z-index: 999;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    z-index: 99999;
 }
 
-/* ANIMATION COMPILER */
-@keyframes masterSpin {
+/* SPIN CORE ENGINE */
+@keyframes masterRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
     .navbar { flex-direction: column; gap: 15px; }
-    .hero-content h1 { font-size: 2.3rem; }
-    .video-frame iframe { height: 250px; }
+    .hero-content h1 { font-size: 2.4rem; }
+    .video-frame iframe { height: 260px; }
+    .map-box iframe { height: 300px; }
 }
