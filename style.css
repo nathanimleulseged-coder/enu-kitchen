@@ -98,7 +98,23 @@ body {
 /* HERO CANVAS */
 .hero-section {
     padding: 120px 8% 80px 8%;
-    background: radial-gradient(circle at top right, rgba(255, 26, 26, 0.02) 0%, #ffffff 80%);
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("hero-food.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     text-align: center;
     min-height: 70vh;
     display: flex;
@@ -329,4 +345,8 @@ footer {
     .hero-content h1 { font-size: 2.4rem; }
     .video-frame iframe { height: 260px; }
     .map-box iframe { height: 300px; }
+}
+.hero-content h1,
+.hero-content p{
+    color:white;
 }
