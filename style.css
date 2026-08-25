@@ -14,6 +14,8 @@
     --color-red-deep: #7C211D;
     --color-gold: #C89B3C;
     --color-line: #E4D5BF;
+    --color-leaf: #4B5D3C;
+    --color-leaf-light: #6B7F52;
 
     --font-display: 'Fraunces', serif;
     --font-body: 'Work Sans', sans-serif;
@@ -238,6 +240,7 @@ button:focus-visible {
 /* ---------- SECTIONS ---------- */
 .section-container {
     padding: 90px 6%;
+    position: relative;
 }
 
 .section-container.alt {
@@ -247,6 +250,8 @@ button:focus-visible {
 .section-inner {
     max-width: 1100px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .section-header {
@@ -422,7 +427,61 @@ button:focus-visible {
     font-style: italic;
 }
 
-/* ---------- MENU CARDS ---------- */
+/* ---------- DISH PHOTO CARDS ----------
+   Compact photo cards for dishes you've sent pictures for.
+   Sits above the plain dish-list within each category, so
+   photographed dishes lead and the rest follow underneath. */
+.dish-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dish-photo-card {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dish-photo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px rgba(42, 33, 27, 0.1);
+}
+
+.dish-photo-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: var(--color-cream-deep);
+}
+
+.dish-photo-info {
+    padding: 10px 8px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dish-photo-info .amharic {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-ink);
+}
+
+.dish-photo-info .dish-name-en {
+    font-size: 0.72rem;
+}
+
+.dish-photo-info .dish-price {
+    margin-top: 4px;
+}
+
+/* ---------- MENU CARDS (legacy grid, kept for reuse) ---------- */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -504,6 +563,86 @@ button:focus-visible {
     color: var(--color-red);
 }
 
+/* ---------- DRINK LIST (Beverages) ----------
+   Stacked rows, not side-by-side cards — each with a small
+   thumbnail photo, name, and price. */
+.drink-list {
+    list-style: none;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.drink-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 2px;
+}
+
+.drink-row:nth-child(even) {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.drink-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--color-cream-deep);
+    border: 1px solid var(--color-line);
+}
+
+.drink-name {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+}
+
+.drink-name .amharic {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    white-space: nowrap;
+}
+
+.drink-name .dish-name-en {
+    white-space: nowrap;
+}
+
+/* ---------- LOCATE PHOTOS ----------
+   Building photos so people can actually find the door. */
+.locate-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto 36px;
+}
+
+.locate-photos figure {
+    margin: 0;
+}
+
+.locate-photos img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid var(--color-line);
+    display: block;
+}
+
+.locate-photos figcaption {
+    text-align: center;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-ink-soft);
+    margin-top: 6px;
+}
+
 /* ---------- MAP ---------- */
 .map-box {
     border-radius: 3px;
@@ -536,6 +675,43 @@ button:focus-visible {
 .contact-line i {
     color: var(--color-red);
     margin-right: 8px;
+}
+
+/* ---------- CORNER DECORATION ----------
+   A small hand-drawn-style vine + leaf motif, top-left and
+   bottom-right, with a tiny red/white wedge at the very tip
+   echoing the brand-strip red and the pattern-divider gold/red.
+   Fixed to the viewport, quiet and low-opacity — meant to be
+   noticed, not to compete with the menu. Hidden on small
+   screens where there's no spare margin for it. */
+.deco {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0.85;
+}
+
+.deco-top-left {
+    top: 0;
+    left: 0;
+}
+
+.deco-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.deco svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .deco {
+        display: none;
+    }
 }
 
 /* ---------- FOOTER ---------- */
@@ -626,5 +802,13 @@ footer {
 
     .dish-price {
         margin-left: auto;
+    }
+
+    .locate-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .drink-row {
+        flex-wrap: wrap;
     }
 }
