@@ -6,10 +6,12 @@
     <title>Enu Kitchen | Traditional Wolayta Food</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;600;700&family=Noto+Serif+Ethiopic:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="brand-strip"></div>
 
     <nav class="navbar">
         <div class="logo-mark">
@@ -18,96 +20,100 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#tv">TV Feature</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#contact">Locate Us</a></li>
+            <li><a href="#tv">TV Feature</a></li>
         </ul>
     </nav>
 
     <header id="home" class="hero-section">
         <div class="hero-content">
-            <span class="eyebrow">Traditional Wolayta Kitchen</span>
-            <h1>Authentic Flavor,<br><em>Cooked With Care</em></h1>
+            <span class="eyebrow amharic">ባህላዊ የወላይታ ወጥ ቤት</span>
+            <h1 class="amharic">እውነተኛ ጣዕም፣<br><em>በፍቅር የተሰራ</em></h1>
             <p>[Add a short intro line about Enu Kitchen here]</p>
             <div>
-                <a href="#menu" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> View Menu</a>
-                <a href="https://wa.me/251941147018" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
+                <a href="#menu" class="btn btn-primary amharic"><i class="fa-solid fa-utensils"></i> ምናሌ ይመልከቱ</a>
+                <a href="tel:+251941147018" class="btn btn-secondary amharic"><i class="fa-solid fa-phone"></i> ለማዘዝ ይደውሉ</a>
             </div>
         </div>
     </header>
 
-    <section id="tv" class="section-container">
-        <div class="section-inner">
-            <div class="section-header">
-                <span class="eyebrow">Recognition</span>
-                <h2>As Seen On National TV</h2>
-                <div class="pattern-divider"></div>
-            </div>
-            <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/sFRiKp0d-20" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
     <section id="menu" class="section-container alt">
         <div class="section-inner">
             <div class="section-header">
-                <span class="eyebrow">What We Serve</span>
-                <h2>Our Menu</h2>
+                <span class="eyebrow amharic">የምናቀርበው</span>
+                <h2 class="amharic">ምናሌያችን</h2>
                 <div class="pattern-divider"></div>
             </div>
 
             <div class="menu-tabs">
-                <button class="tab-btn active" onclick="openMenu(event, 'foods')">Traditional Foods</button>
+                <button class="tab-btn active amharic" onclick="openMenu(event, 'foods')">ባህላዊ ምግቦች</button>
                 <button class="tab-btn" onclick="openMenu(event, 'drinks')">Beverages</button>
             </div>
 
             <div id="foods" class="menu-content active">
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <div class="img-box">
-                            <img src="menu-food.jpg" alt="Bilando">
-                        </div>
-                        <div class="card-details">
-                            <h3>Bilando</h3>
-                            <p>[Add description here]</p>
-                            <span class="card-price">Contact for Price</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-box placeholder">
-                            <i class="fa-solid fa-fire-flame-curry"></i>
-                            <span class="placeholder-label">Add photo</span>
-                        </div>
-                        <div class="card-details">
-                            <h3>Logomo</h3>
-                            <p>[Add description here]</p>
-                            <span class="card-price">Contact for Price</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-box placeholder">
-                            <i class="fa-solid fa-mortar-pestle"></i>
-                            <span class="placeholder-label">Add photo</span>
-                        </div>
-                        <div class="card-details">
-                            <h3>Mucho</h3>
-                            <p>[Add description here]</p>
-                            <span class="card-price">Contact for Price</span>
-                        </div>
-                    </div>
-                    <div class="menu-card">
-                        <div class="img-box placeholder">
-                            <i class="fa-solid fa-bread-slice"></i>
-                            <span class="placeholder-label">Add photo</span>
-                        </div>
-                        <div class="card-details">
-                            <h3>Traditional Corn Qitta</h3>
-                            <p>[Add description here]</p>
-                            <span class="card-price">Contact for Price</span>
-                        </div>
-                    </div>
+
+                <div class="menu-category">
+                    <h3 class="category-title"><span class="amharic">ባህላዊ ምግብ</span><span class="category-title-en">Traditional Food</span></h3>
+                    <ul class="dish-list">
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ በጎመን</span><span class="dish-name-en">Ayb Begomen</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ በስጋ</span><span class="dish-name-en">Ayb Besiga</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ በሙቾ</span><span class="dish-name-en">Ayb Bemucho</span></span><span class="leader"></span><span class="dish-price">600 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ በእንቁላል</span><span class="dish-name-en">Ayb Beenkulal</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ በቅንጬ</span><span class="dish-name-en">Ayb Bekinche</span></span><span class="leader"></span><span class="dish-price">450 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">አይብ</span><span class="dish-name-en">Ayb</span></span><span class="leader"></span><span class="dish-price">400 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ሙቾ</span><span class="dish-name-en">Mucho</span></span><span class="leader"></span><span class="dish-price">600 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቢላንዶ</span><span class="dish-name-en">Bilando</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቁርቁፋ</span><span class="dish-name-en">Kurkufa</span></span><span class="leader"></span><span class="dish-price">450 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ፎሶሴ</span><span class="dish-name-en">Fosose</span></span><span class="leader"></span><span class="dish-price">400 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቆጮ</span><span class="dish-name-en">Kochkocho</span></span><span class="leader"></span><span class="dish-price">600 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ሎጎሞ</span><span class="dish-name-en">Logomo</span></span><span class="leader"></span><span class="dish-price">600 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ጎመን ክትፎ</span><span class="dish-name-en">Gomen Kitfo</span></span><span class="leader"></span><span class="dish-price">400 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ጎመን በክትፎ</span><span class="dish-name-en">Gomen Bekita</span></span><span class="leader"></span><span class="dish-price">400 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ባጪራ</span><span class="dish-name-en">Bacira</span></span><span class="leader"></span><span class="dish-price">600 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ንፍሮ</span><span class="dish-name-en">Nifro</span></span><span class="leader"></span><span class="dish-price">150 Birr</span></li>
+                    </ul>
                 </div>
+
+                <div class="menu-category">
+                    <h3 class="category-title"><span class="amharic">የስጋ ምግቦች</span><span class="category-title-en">Non-Fasting</span></h3>
+                    <ul class="dish-list">
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ዱለት</span><span class="dish-name-en">Dulet</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ጥብስ</span><span class="dish-name-en">Tibs</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ጥብስ ፍርፍር</span><span class="dish-name-en">Tibs Firfir</span></span><span class="leader"></span><span class="dish-price">320 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቀይ ወጥ</span><span class="dish-name-en">Key Wot</span></span><span class="leader"></span><span class="dish-price">500 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቂቅል</span><span class="dish-name-en">Kikil</span></span><span class="leader"></span><span class="dish-price">550 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ባህላዊ ኮምቦ</span><span class="dish-name-en">Traditional Combo</span></span><span class="leader"></span><span class="dish-price">1000 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">እርጎ</span><span class="dish-name-en">Yoghurt</span></span><span class="leader"></span><span class="dish-price">200 Birr</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="category-title"><span class="amharic">የጾም ምግቦች</span><span class="category-title-en">Fasting</span></h3>
+                    <ul class="dish-list">
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ሽሮ</span><span class="dish-name-en">Shiro</span></span><span class="leader"></span><span class="dish-price">250 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ምስር</span><span class="dish-name-en">Misir</span></span><span class="leader"></span><span class="dish-price">350 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ግማሽ ግማሽ</span><span class="dish-name-en">Half Half</span></span><span class="leader"></span><span class="dish-price">300 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ሱፍ ፍትፍት</span><span class="dish-name-en">Suf Fitfit</span></span><span class="leader"></span><span class="dish-price">200 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ተጋቢኖ</span><span class="dish-name-en">Tegabino</span></span><span class="leader"></span><span class="dish-price">300 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">በያይነት</span><span class="dish-name-en">Beyaynet</span></span><span class="leader"></span><span class="dish-price">350 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ቆርጥ ፍትፍት</span><span class="dish-name-en">Kurt Fitfit</span></span><span class="leader"></span><span class="dish-price">350 Birr</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="category-title"><span class="amharic">ቁርስ እና መክሰስ</span><span class="category-title-en">Breakfast &amp; Snacks</span></h3>
+                    <ul class="dish-list">
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">የተደበላለቀ እንቁላል</span><span class="dish-name-en">Egg Scrambled</span></span><span class="leader"></span><span class="dish-price">250 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ሳንድዊች</span><span class="dish-name-en">Sandwich</span></span><span class="leader"></span><span class="dish-price">250 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">የተጠበሰ ድንች</span><span class="dish-name-en">French Fries</span></span><span class="leader"></span><span class="dish-price">200 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">እርጥብ</span><span class="dish-name-en">Ertib</span></span><span class="leader"></span><span class="dish-price">150 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">እርጥብ ስፔሻል</span><span class="dish-name-en">Ertib Special</span></span><span class="leader"></span><span class="dish-price">250 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ፉል</span><span class="dish-name-en">Ful</span></span><span class="leader"></span><span class="dish-price">200 Birr</span></li>
+                        <li class="dish-row"><span class="dish-name"><span class="amharic">ፉል ስፔሻል</span><span class="dish-name-en">Ful Special</span></span><span class="leader"></span><span class="dish-price">300 Birr</span></li>
+                    </ul>
+                </div>
+
             </div>
 
             <div id="drinks" class="menu-content">
@@ -146,6 +152,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="pending-note">Full drinks menu pending confirmation — placeholder items shown for now.</p>
             </div>
         </div>
     </section>
@@ -169,14 +176,27 @@
         </div>
     </section>
 
+    <section id="tv" class="section-container alt">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="eyebrow amharic">እውቅና</span>
+                <h2 class="amharic">በሀገር አቀፍ ቴሌቪዥን የታየ</h2>
+                <div class="pattern-divider"></div>
+            </div>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/sFRiKp0d-20" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-brand">ENU KITCHEN</div>
         <div class="footer-owner">Owned by Etifwork Mengistu</div>
         <div class="footer-credit">© 2026 Enu Kitchen. Designed and coded by Nathanim.</div>
     </footer>
 
-    <a href="https://wa.me/251941147018" class="whatsapp-float" target="_blank" aria-label="Message us on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="tel:+251941147018" class="call-float" aria-label="Call Enu Kitchen">
+        <i class="fa-solid fa-phone"></i>
     </a>
 
     <script src="script.js"></script>
