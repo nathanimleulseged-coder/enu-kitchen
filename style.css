@@ -1,5 +1,8 @@
 /* =========================================================
    ENU KITCHEN — stylesheet
+   Palette + type are defined once as CSS variables so the
+   whole site can be retuned from one place. (This is called
+   a "design token" system — ask me about it any time.)
    ========================================================= */
 
 :root {
@@ -14,6 +17,20 @@
 
     --font-display: 'Fraunces', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-amharic: 'Noto Serif Ethiopic', serif;
+}
+
+/* ---------- BRAND STRIP ----------
+   A slim red bar across the very top — the "more red" ask,
+   spent in one small, deliberate place rather than everywhere. */
+.brand-strip {
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-red);
+}
+
+.amharic {
+    font-family: var(--font-amharic);
 }
 
 * {
@@ -116,13 +133,15 @@ button:focus-visible {
     transform: scaleX(1);
 }
 
-/* ---------- SIGNATURE DIVIDER ---------- */
+/* ---------- SIGNATURE DIVIDER ----------
+   A small woven zig-zag, a quiet nod to traditional
+   basket/textile borders, standing in for a plain rule. */
 .pattern-divider {
     height: 9px;
     width: 70px;
     margin: 18px auto 0;
     background-image:
-        linear-gradient(135deg, var(--color-gold) 25%, transparent 25%),
+        linear-gradient(135deg, var(--color-red) 25%, transparent 25%),
         linear-gradient(225deg, var(--color-gold) 25%, transparent 25%);
     background-position: 0 0;
     background-size: 9px 9px;
@@ -306,6 +325,103 @@ button:focus-visible {
     display: block;
 }
 
+/* ---------- DISH LIST (Foods) ---------- */
+.menu-category {
+    margin-bottom: 46px;
+}
+
+.menu-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.category-title .amharic {
+    font-family: var(--font-amharic);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-ink);
+}
+
+.category-title-en {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.dish-list {
+    list-style: none;
+}
+
+.dish-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 2px;
+}
+
+.dish-row:nth-child(even) {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.dish-name {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex: 0 1 auto;
+}
+
+.dish-name .amharic {
+    font-family: var(--font-amharic);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    white-space: nowrap;
+}
+
+.dish-name-en {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+    white-space: nowrap;
+}
+
+.leader {
+    flex: 1 1 auto;
+    border-bottom: 1px dotted var(--color-line);
+    height: 0;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    min-width: 16px;
+}
+
+.dish-price {
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--color-red);
+    white-space: nowrap;
+}
+
+.pending-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+    margin-top: 24px;
+    font-style: italic;
+}
+
 /* ---------- MENU CARDS ---------- */
 .menu-grid {
     display: grid;
@@ -448,12 +564,12 @@ footer {
     color: rgba(251, 246, 239, 0.5);
 }
 
-/* ---------- WHATSAPP FLOAT ---------- */
-.whatsapp-float {
+/* ---------- CALL FLOAT ---------- */
+.call-float {
     position: fixed;
     bottom: 28px;
     right: 28px;
-    background-color: #25d366;
+    background-color: var(--color-red);
     color: #ffffff;
     width: 56px;
     height: 56px;
@@ -461,14 +577,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 24px;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
     z-index: 998;
     transition: transform 0.2s ease;
 }
 
-.whatsapp-float:hover {
+.call-float:hover {
     transform: scale(1.06);
+    background-color: var(--color-red-deep);
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -497,5 +614,17 @@ footer {
     .tab-btn {
         padding: 9px 18px;
         font-size: 0.72rem;
+    }
+
+    .dish-row {
+        flex-wrap: wrap;
+    }
+
+    .leader {
+        display: none;
+    }
+
+    .dish-price {
+        margin-left: auto;
     }
 }
