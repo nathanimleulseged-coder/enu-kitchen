@@ -165,7 +165,7 @@ button:focus-visible {
     text-align: center;
     background:
         linear-gradient(180deg, rgba(42, 33, 27, 0.6), rgba(158, 43, 37, 0.55)),
-        url("hero-food.jpg");
+        url("hero-food.png");
     background-size: cover;
     background-position: center;
 }
