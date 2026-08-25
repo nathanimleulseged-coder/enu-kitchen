@@ -14,7 +14,8 @@
     <div class="brand-strip"></div>
 
     <!-- Corner decoration: vine/leaf motif with a small red & white
-         wedge at the tip. See style.css "CORNER DECORATION" comment. -->
+         wedge at the tip. Now visible on phone too, just scaled
+         down — see style.css "CORNER DECORATION" comment. -->
     <div class="deco deco-top-left" aria-hidden="true">
         <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,0 L30,0 L0,30 Z" fill="#ffffff"/>
@@ -80,13 +81,18 @@
 
                 <div class="menu-category">
                     <h3 class="category-title"><span class="amharic">ልዩ</span><span class="category-title-en">Special</span></h3>
-                    <div class="dish-photo-grid">
+                    <div class="dish-photo-list">
                         <div class="dish-photo-card">
                             <img src="traditional combo.jpg" alt="Traditional Combo" loading="lazy">
                             <div class="dish-photo-info">
-                                <span class="amharic">ባህላዊ ኮምቦ</span>
-                                <span class="dish-name-en">Traditional Combo</span>
-                                <span class="dish-price">1000 Birr</span>
+                                <div class="dish-photo-names">
+                                    <span class="amharic">ባህላዊ ኮምቦ</span>
+                                    <span class="dish-name-en">Traditional Combo</span>
+                                </div>
+                                <div class="dish-photo-priceline">
+                                    <span class="leader"></span>
+                                    <span class="dish-price">1000 Birr</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,30 +100,48 @@
 
                 <div class="menu-category">
                     <h3 class="category-title"><span class="amharic">ባህላዊ ምግብ</span><span class="category-title-en">Traditional Food</span></h3>
-                    <div class="dish-photo-grid">
+                    <div class="dish-photo-list">
                         <div class="dish-photo-card">
                             <img src="mucho.jpg" alt="Mucho" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ሙቾ</span><span class="dish-name-en">Mucho</span><span class="dish-price">600 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ሙቾ</span><span class="dish-name-en">Mucho</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">600 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="bilando.jpg" alt="Bilando" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ቢላንዶ</span><span class="dish-name-en">Bilando</span><span class="dish-price">500 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ቢላንዶ</span><span class="dish-name-en">Bilando</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">500 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="logomo.jpg" alt="Logomo" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ሎጎሞ</span><span class="dish-name-en">Logomo</span><span class="dish-price">600 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ሎጎሞ</span><span class="dish-name-en">Logomo</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">600 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="gomen kitfo.jpg" alt="Gomen Kitfo" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ጎመን ክትፎ</span><span class="dish-name-en">Gomen Kitfo</span><span class="dish-price">400 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ጎመን ክትፎ</span><span class="dish-name-en">Gomen Kitfo</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">400 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="fosese.jpg" alt="Fosose" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ፎሶሴ</span><span class="dish-name-en">Fosose</span><span class="dish-price">400 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ፎሶሴ</span><span class="dish-name-en">Fosose</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">400 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="ayb.jpg" alt="Ayb" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">አይብ</span><span class="dish-name-en">Ayb</span><span class="dish-price">400 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">አይብ</span><span class="dish-name-en">Ayb</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">400 Birr</span></div>
+                            </div>
                         </div>
                     </div>
                     <ul class="dish-list">
@@ -136,14 +160,20 @@
 
                 <div class="menu-category">
                     <h3 class="category-title"><span class="amharic">የስጋ ምግቦች</span><span class="category-title-en">Non-Fasting</span></h3>
-                    <div class="dish-photo-grid">
+                    <div class="dish-photo-list">
                         <div class="dish-photo-card">
                             <img src="dulet.jpg" alt="Dulet" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ዱለት</span><span class="dish-name-en">Dulet</span><span class="dish-price">500 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ዱለት</span><span class="dish-name-en">Dulet</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">500 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="tibs.jpg" alt="Tibs" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ጥብስ</span><span class="dish-name-en">Tibs</span><span class="dish-price">500 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ጥብስ</span><span class="dish-name-en">Tibs</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">500 Birr</span></div>
+                            </div>
                         </div>
                     </div>
                     <ul class="dish-list">
@@ -156,18 +186,27 @@
 
                 <div class="menu-category">
                     <h3 class="category-title"><span class="amharic">የጾም ምግቦች</span><span class="category-title-en">Fasting</span></h3>
-                    <div class="dish-photo-grid">
+                    <div class="dish-photo-list">
                         <div class="dish-photo-card">
                             <img src="shiro.jpg" alt="Shiro" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ሽሮ</span><span class="dish-name-en">Shiro</span><span class="dish-price">250 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ሽሮ</span><span class="dish-name-en">Shiro</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">250 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="misir.jpg" alt="Misir" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">ምስር</span><span class="dish-name-en">Misir</span><span class="dish-price">350 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">ምስር</span><span class="dish-name-en">Misir</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">350 Birr</span></div>
+                            </div>
                         </div>
                         <div class="dish-photo-card">
                             <img src="beyaynet.jpg" alt="Beyaynet" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">በያይነት</span><span class="dish-name-en">Beyaynet</span><span class="dish-price">350 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">በያይነት</span><span class="dish-name-en">Beyaynet</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">350 Birr</span></div>
+                            </div>
                         </div>
                     </div>
                     <ul class="dish-list">
@@ -180,10 +219,13 @@
 
                 <div class="menu-category">
                     <h3 class="category-title"><span class="amharic">ቁርስ እና መክሰስ</span><span class="category-title-en">Breakfast &amp; Snacks</span></h3>
-                    <div class="dish-photo-grid">
+                    <div class="dish-photo-list">
                         <div class="dish-photo-card">
                             <img src="french fries.jpg" alt="French Fries" loading="lazy">
-                            <div class="dish-photo-info"><span class="amharic">የድንች ጥብስ</span><span class="dish-name-en">French Fries</span><span class="dish-price">200 Birr</span></div>
+                            <div class="dish-photo-info">
+                                <div class="dish-photo-names"><span class="amharic">የድንች ጥብስ</span><span class="dish-name-en">French Fries</span></div>
+                                <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">200 Birr</span></div>
+                            </div>
                         </div>
                     </div>
                     <ul class="dish-list">
@@ -199,44 +241,50 @@
             </div>
 
             <div id="drinks" class="menu-content">
-                <ul class="drink-list">
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="coffee.jpg" alt="Coffee" loading="lazy">
-                        <span class="drink-name"><span class="amharic">ቡና</span><span class="dish-name-en">Coffee</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">60 Birr</span>
-                    </li>
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="tea.jpg" alt="Tea" loading="lazy">
-                        <span class="drink-name"><span class="amharic">ሻይ</span><span class="dish-name-en">Tea</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">50 Birr</span>
-                    </li>
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="kitel buna.jpg" alt="Kitel Buna" loading="lazy">
-                        <span class="drink-name"><span class="amharic">ቅጠል ቡና</span><span class="dish-name-en">Kitel Buna (Leaf Coffee)</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">100 Birr</span>
-                    </li>
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="yoghurt.jpg" alt="Yoghurt" loading="lazy">
-                        <span class="drink-name"><span class="amharic">እርጎ</span><span class="dish-name-en">Yoghurt</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">170 Birr</span>
-                    </li>
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="soft drink.jpg" alt="Soft Drinks" loading="lazy">
-                        <span class="drink-name"><span class="dish-name-en">Soft Drinks</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">60 Birr</span>
-                    </li>
-                    <li class="drink-row">
-                        <img class="drink-thumb" src="beer.jpg" alt="Beer" loading="lazy">
-                        <span class="drink-name"><span class="amharic">ቢራ</span><span class="dish-name-en">Beer</span></span>
-                        <span class="leader"></span>
-                        <span class="dish-price">100 Birr</span>
-                    </li>
-                </ul>
+                <div class="dish-photo-list">
+                    <div class="dish-photo-card">
+                        <img src="coffee.jpg" alt="Coffee" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="amharic">ቡና</span><span class="dish-name-en">Coffee</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">60 Birr</span></div>
+                        </div>
+                    </div>
+                    <div class="dish-photo-card">
+                        <img src="tea.jpg" alt="Tea" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="amharic">ሻይ</span><span class="dish-name-en">Tea</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">50 Birr</span></div>
+                        </div>
+                    </div>
+                    <div class="dish-photo-card">
+                        <img src="kitel buna.jpg" alt="Kitel Buna" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="amharic">ቅጠል ቡና</span><span class="dish-name-en">Kitel Buna (Leaf Coffee)</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">100 Birr</span></div>
+                        </div>
+                    </div>
+                    <div class="dish-photo-card">
+                        <img src="yoghurt.jpg" alt="Yoghurt" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="amharic">እርጎ</span><span class="dish-name-en">Yoghurt</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">170 Birr</span></div>
+                        </div>
+                    </div>
+                    <div class="dish-photo-card">
+                        <img src="soft drink.jpg" alt="Soft Drinks" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="dish-name-en">Soft Drinks</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">60 Birr</span></div>
+                        </div>
+                    </div>
+                    <div class="dish-photo-card">
+                        <img src="beer.jpg" alt="Beer" loading="lazy">
+                        <div class="dish-photo-info">
+                            <div class="dish-photo-names"><span class="amharic">ቢራ</span><span class="dish-name-en">Beer</span></div>
+                            <div class="dish-photo-priceline"><span class="leader"></span><span class="dish-price">100 Birr</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
